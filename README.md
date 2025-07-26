@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Liberate-Labs Resource Booking System Frontend
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+![Logo](path-to-logo) <!-- TODO: Add project logo -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[![GitHub stars](https://img.shields.io/github/stars/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend?style=for-the-badge)](https://github.com/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend?style=for-the-badge)](https://github.com/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend/network)
+[![GitHub issues](https://img.shields.io/github/issues/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend?style=for-the-badge)](https://github.com/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend/issues)
+[![GitHub license](https://img.shields.io/github/license/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend?style=for-the-badge)](LICENSE)
+
+**A Next.js frontend for the Liberate Labs resource booking system.**
+
+[Live Demo](https://demo-link.com) <!-- TODO: Add live demo link --> |
+[Documentation](https://docs-link.com) <!-- TODO: Add documentation link -->
+
+</div>
+
+## 📖 Overview
+
+This project is the frontend for a resource booking system, built using Next.js, TypeScript, and Tailwind CSS.  It provides a user-friendly interface for browsing and booking available resources.  The frontend communicates with a backend API (not included in this repository) to manage data.
+
+## ✨ Features
+
+- 🗓️ **Resource Calendar:** View resource availability on a calendar.
+- 🔍 **Resource Search:** Search for resources based on criteria.
+- 📝 **Booking Form:**  Simple and intuitive booking form.
+- ⏳ **Booking Confirmation:** Confirmation page after a successful booking.
+- 📱 **Responsive Design:** Optimized for various screen sizes.
+
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+
+[![Next.js](https://img.shields.io/badge/next.js-503090?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/developersajadur/Liberate-Labs-Resource-Booking-System-Frontend.git
+   cd Liberate-Labs-Resource-Booking-System-Frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Visit `http://localhost:3000`
+
+
+## 📁 Project Structure
+
+```
+project-root/
+├── public/            # Static assets
+├── src/
+│   ├── components/     # React components
+│   ├── pages/         # Application pages
+│   └── styles/        # Global styles
+├── next.config.ts     # Next.js configuration
+├── package.json       # Project dependencies
+├── package-lock.json  # Dependency lock file
+├── tailwind.config.ts # Tailwind CSS configuration
+├── tsconfig.json      # TypeScript configuration
+└── [other detected directories]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
+No environment variables are explicitly used in the provided codebase.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Development
 
-## Learn More
+### Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command         | Description                               |
+|-----------------|-------------------------------------------|
+| `npm run dev`   | Starts the development server             |
+| `npm run build` | Builds the application for production      |
+| `npm run lint`  | Runs ESLint to check for code style issues |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧪 Testing
 
-## Deploy on Vercel
+<!-- TODO: Add testing information if tests are present -->
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<!-- TODO: Add deployment information if applicable -->
+
+## 🤝 Contributing
+
+<!-- TODO: Add contributing guidelines -->
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it helpful!**
+
+Made with ❤️ by [developersajadur] <!-- TODO: Add author name -->
+
+</div>
