@@ -34,13 +34,11 @@ export const getBookingsWithQuery = async (query: string = "") => {
       headers: {
         "Content-Type": "application/json",
       },
-      cache: "no-store",
-      next: { tags: ["BOOKINGS"] }, // provide the tag here
+      next: { tags: ["BOOKINGS"] }, 
     });
 
     const data = await response.json();
 
-    // DO NOT call revalidateTag here (not allowed)
 
     return data.data;
   } catch (error) {
@@ -74,7 +72,6 @@ export const getAvailableSlots = async (
   duration: string
 ) => {
   try {
-    // console.log(date, duration, resourceId);
     const response = await fetch(
       `${BASE_API_URL}/available-slots?resourceId=${resourceId}&date=${date}&duration=${duration}`,
       {

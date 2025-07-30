@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "8f11b47e-6d94-4fe5-8c20-824444c79ae1",
+		"name": "Resource Booking System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39124117"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceId\": \"e1f4d12a-8f44-4c9a-9e88-7e4b2a1f3456\",\r\n  \"startTime\": \"2025-07-25T10:00:00.000Z\",\r\n  \"endTime\": \"2025-07-25T11:30:00.000Z\",\r\n  \"requestedBy\": \"Sajadur Rahman\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/bookings",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking With Query",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceId\": \"e1f4d12a-8f44-4c9a-9e88-7e4b2a1f3456\",\r\n  \"startTime\": \"2025-07-25T10:00:00.000Z\",\r\n  \"endTime\": \"2025-07-25T11:30:00.000Z\",\r\n  \"requestedBy\": \"Sajadur Rahman\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/bookings?date=2025-07-25&resourceName=room",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-07-25"
+								},
+								{
+									"key": "resourceName",
+									"value": "room"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/bookings/e8c54782-1700-4bf1-af21-4fe8cf1b9378",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"bookings",
+								"e8c54782-1700-4bf1-af21-4fe8cf1b9378"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Available Slot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/available-slots?resourceId=8f56285c-d89b-4489-a647-5dfdff4736da&date=2025-07-25&duration=60",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"available-slots"
+							],
+							"query": [
+								{
+									"key": "resourceId",
+									"value": "8f56285c-d89b-4489-a647-5dfdff4736da"
+								},
+								{
+									"key": "date",
+									"value": "2025-07-25"
+								},
+								{
+									"key": "duration",
+									"value": "60"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource",
+			"item": [
+				{
+					"name": "Create Resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Conference Room A\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/resources",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"resources"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resources",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}

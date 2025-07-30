@@ -1,6 +1,5 @@
 "use client"
 
-
 import { TBooking } from "@/types/booking.type";
 import { Button } from "../ui/button";
 import { cancelBooking } from "@/services/BookingService";

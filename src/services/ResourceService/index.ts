@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
 import { BASE_API_URL } from "..";
 
 export const getAllResources = async () => {
@@ -9,6 +10,7 @@ export const getAllResources = async () => {
       headers: {
         "Content-Type": "application/json",
       },
+      next: { tags: ["RESOURCES"] },
     });
 
     const result = await response.json();
@@ -19,7 +21,7 @@ export const getAllResources = async () => {
   }
 };
 
-export const createResource = async (resourceData: {name: string}) => {
+export const createResource = async (resourceData: { name: string }) => {
   try {
     const response = await fetch(`${BASE_API_URL}/resources`, {
       method: "POST",
@@ -28,6 +30,7 @@ export const createResource = async (resourceData: {name: string}) => {
       },
       body: JSON.stringify(resourceData),
     });
+    revalidateTag("RESOURCES");
     return response.json();
   } catch (error) {
     console.error("Error creating resource:", error);
